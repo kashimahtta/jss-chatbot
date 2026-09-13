@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kashiAI — JSSATEN Assistant</title>
+    <meta
+      name="description"
+      content="kashiAI, the virtual assistant for JSS Academy of Technical Education, Noida (JSSATEN). Ask about admissions, academics, campus life, research, placements and more."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <aside class="intro">
+        <div class="intro-top">
+          <div class="k-mark">K</div>
+          <span class="tag">JSSATEN VIRTUAL ASSISTANT</span>
+          <h1>Meet kashiAI</h1>
+          <p class="desc">
+            Ask kashiAI about admissions, academics, campus life, research,
+            placements or contact details for JSS Academy of Technical
+            Education, Noida.
+          </p>
+        </div>
+        <div class="intro-list">
+          <span class="cap">Try asking about</span>
+          <button class="topic-chip" data-q="Tell me about JSSATEN">
+            About JSSATEN <span class="arw">→</span>
+          </button>
+          <button
+            class="topic-chip"
+            data-q="What is the vision and mission of JSSATEN?"
+          >
+            Vision &amp; Mission <span class="arw">→</span>
+          </button>
+          <button class="topic-chip" data-q="What courses does JSSATEN offer?">
+            Academics &amp; Courses <span class="arw">→</span>
+          </button>
+          <button class="topic-chip" data-q="What facilities are on campus?">
+            Campus &amp; Facilities <span class="arw">→</span>
+          </button>
+          <button
+            class="topic-chip"
+            data-q="Tell me about placements at JSSATEN"
+          >
+            Placements <span class="arw">→</span>
+          </button>
+          <button class="topic-chip" data-q="How do I contact JSSATEN?">
+            Contact &amp; Location <span class="arw">→</span>
+          </button>
+        </div>
+        <div class="intro-foot">
+          <span class="status-dot"><i></i> Online — instant answers</span>
+          Answers are based on information published on the JSSATEN website. For
+          anything not covered here, please contact the college office directly.
+        </div>
+      </aside>
+
+      <section class="chat-panel">
+        <div class="chat-head">
+          <div class="av">K</div>
+          <div>
+            <strong>kashiAI</strong>
+            <small><i></i> JSSATEN Assistant</small>
+          </div>
+          <button class="clear-btn" id="clearBtn">Clear chat</button>
+        </div>
+
+        <div
+          class="chat-body"
+          id="chatBody"
+          role="log"
+          aria-live="polite"
+          aria-label="Chat conversation"
+        ></div>
+
+        <div class="suggest-row" id="suggestRow">
+          <button class="suggest-chip" data-q="What is the fee structure?">
+            Fee structure
+          </button>
+          <button
+            class="suggest-chip"
+            data-q="How many students study at JSSATEN?"
+          >
+            Student strength
+          </button>
+          <button class="suggest-chip" data-q="Is JSSATEN AICTE approved?">
+            Accreditation
+          </button>
+          <button class="suggest-chip" data-q="Where is JSSATEN located?">
+            Location
+          </button>
+          <button
+            class="suggest-chip"
+            data-q="Tell me about research at JSSATEN"
+          >
+            Research
+          </button>
+        </div>
+
+        <form class="chat-input-bar" id="chatForm">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Ask kashiAI about JSSATEN…"
+            autocomplete="off"
+            aria-label="Type your message"
+          />
+          <button
+            type="submit"
+            class="send-btn"
+            id="sendBtn"
+            aria-label="Send message"
+          >
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 2L11 13" />
+              <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <script src="knowledgeBase.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
